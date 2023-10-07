@@ -8,16 +8,9 @@ Array.from(buttons).forEach((button)=>{
             string= "ERROR";
             document.querySelector('input').value = string;
         }
-        else if(e.target.innerHTML == '='){
-            let new_string= eval(string);
-            if(string===new_string){
-                string= "ERROR";
-                document.querySelector('input').value = string;
-            }
-            else{
-                string = new_string;
-                document.querySelector('input').value = string;
-            }
+        else if(e.target.innerHTML == '='){   
+            string = eval(string).toFixed(2);
+            document.querySelector('input').value = string;
         }
         else if(e.target.innerHTML == 'RESET'){
             string = "";
