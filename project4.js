@@ -13,7 +13,7 @@ Array.from(buttons).forEach((button)=>{
             document.querySelector('input').value = string;
         }
         else if(e.target.innerHTML == '='){
-            if(string.charAt(0) =="*" || string.charAt(0) =="/" ){
+            if(string.charAt(0) =="*" || string.charAt(0) =="/" || isNaN(string.charAt(string.length-1) ){
                 string= "ERROR";
                 document.querySelector('input').value = string;
             } 
