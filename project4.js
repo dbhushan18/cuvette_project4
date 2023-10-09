@@ -14,7 +14,7 @@ Array.from(buttons).forEach((button)=>{
         }
         else if(e.target.innerHTML == '='){
             if(string.charAt(0) =="*" || string.charAt(0) =="/" || isNaN(string.charAt(string.length-1)) ){
-                string= "ERROR";
+                string= "Invalid Input";
                 document.querySelector('input').value = string;
             } 
             else if(eval(string) == Math.floor(eval(string))){
@@ -27,7 +27,7 @@ Array.from(buttons).forEach((button)=>{
             }  
         }
         
-        else if(e.target.innerHTML == 'DEL'){
+        else if(e.target.innerHTML == 'DEL' && string !="Invalid Input"){
             string = string.toString().slice(0,-1);
             document.querySelector('input').value = string;
         }       
